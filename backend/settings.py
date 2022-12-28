@@ -83,15 +83,26 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bouaxzgofysx5pcqdgif',
-        'USER': 'uyzk1macohidh4q0',
-        'PASSWORD': 'IBUI40cNnzHVl6Va9kD1',
-        'HOST': 'bouaxzgofysx5pcqdgif-mysql.services.clever-cloud.com',
-        'PORT': '3306',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'Qa7MIoE9fQhSjqhjx0Xn',
+        'HOST': 'containers-us-west-178.railway.app',
+        'PORT': '7965',
         "OPTION": {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'bouaxzgofysx5pcqdgif',
+    #     'USER': 'uyzk1macohidh4q0',
+    #     'PASSWORD': 'IBUI40cNnzHVl6Va9kD1',
+    #     'HOST': 'bouaxzgofysx5pcqdgif-mysql.services.clever-cloud.com',
+    #     'PORT': '3306',
+    #     "OPTION": {
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    #     }
+    # }
 
 }
 
@@ -132,7 +143,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
     BASE_DIR / 'frontend/build/static'
 ]
 # Default primary key field type
