@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65aed2b1.css",
+    "main.js": "/static/js/main.c32cc084.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/basket1.png": "/static/media/basket1.717987506421097a9004.png",
+    "static/media/basket.png": "/static/media/basket.28c29d95ed942443e4fe.png",
+    "static/media/not-found.png": "/static/media/not-found.0cebfc4b1ef6f9ac1019.png",
+    "static/media/klipartz.com.png": "/static/media/klipartz.com.57dad36739c56b96bf67.png",
+    "index.html": "/index.html",
+    "main.65aed2b1.css.map": "/static/css/main.65aed2b1.css.map",
+    "main.c32cc084.js.map": "/static/js/main.c32cc084.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65aed2b1.css",
+    "static/js/main.c32cc084.js"
+  ]
+}
