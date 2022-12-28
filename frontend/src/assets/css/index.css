@@ -1,0 +1,96 @@
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+/* header */
+.header {
+  margin-bottom: 2rem;
+}
+/* footer  */
+main {
+  min-height: 80vh;
+}
+.footer {
+  margin-top: 6rem;
+  background-color: rgba(136, 136, 136, 0.767);
+  color: white;
+  text-align: center;
+}
+
+/* navebar */
+.navLink {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* Home css */
+.Land {
+  min-height: 100vh;
+}
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.land-image {
+  width: auto;
+  height: 32rem;
+  position: relative;
+  animation-name: land-anim;
+  animation-duration: 3s;
+}
+@keyframes land-anim {
+  from {
+    right: 60vw;
+  }
+  to {
+    right: 0vw;
+  }
+}
+
+.home-button {
+  display: flex;
+  justify-content: space-around;
+}
+.btn1 {
+  margin-right: 2rem;
+}
+.lead-home {
+  text-align: center;
+}
+
+/* About design */
+
+.about-image {
+  margin-left: 8rem;
+  width: 10rem;
+  transition: all 1s ease-in-out;
+}
+.about-image:hover {
+  transform: translateY(20rem);
+}
+/* card css */
+.img-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* structutre the players page */
+/* the filter side */
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6rem;
+}
+
+/* scrolling effect */
