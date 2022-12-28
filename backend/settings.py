@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import dj_database_url
+import environ
+environ.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -80,32 +81,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'Qa7MIoE9fQhSjqhjx0Xn',
-        'HOST': 'containers-us-west-178.railway.app',
-        'PORT': '7965',
-        "OPTION": {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    print("Postgres URL not found, using sqlite instead")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'bouaxzgofysx5pcqdgif',
-    #     'USER': 'uyzk1macohidh4q0',
-    #     'PASSWORD': 'IBUI40cNnzHVl6Va9kD1',
-    #     'HOST': 'bouaxzgofysx5pcqdgif-mysql.services.clever-cloud.com',
-    #     'PORT': '3306',
-    #     "OPTION": {
-    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-    #     }
-    # }
-
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
