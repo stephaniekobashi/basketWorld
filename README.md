@@ -7,7 +7,7 @@
 ## 1// clone the project then tap the following commands
 
 ```bash
-install virtualenwrapper-win
+pip install virtualenvwrapper-win
 mkvirtualenv projectBasket
 pip install -r requirements.txt
 
